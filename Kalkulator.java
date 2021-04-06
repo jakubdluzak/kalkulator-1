@@ -1,41 +1,48 @@
 package kalkulator;
 
+// Import scanner
 import java.util.Scanner;
 
 public class Kalkulator {
 
     public static void main(String[] args) {
 
-        double wynik = 0;
+        double result = 0;
 
-        System.out.println("1. Dodawanie");
-        System.out.println("2. Odejmowanie");
-        System.out.println("3. Mnożenie");
-        System.out.println("4. Dzielenie");
+        // Print kind of operations
+        System.out.println("1. Addition");
+        System.out.println("2. Subtraction");
+        System.out.println("3. Multiplication");
+        System.out.println("4. Division");
 
-        System.out.println("Wybierz typ działania: ");
+        // Take from user information what operation user want to do
+        System.out.println("Take a kind of operation: ");
         Scanner sc = new Scanner(System.in); 
-        int rodzajDziałania = sc.nextInt();
+        int typeOfOperation = sc.nextInt();
 
-        System.out.println("Podaj pierwszą liczbę: ");
-        double pierwsza = sc.nextDouble();
+        // Take from user information about first number
+        System.out.println("Write first number: ");
+        double first = sc.nextDouble();
 
-        System.out.println("Podaj drugą liczbę: ");
-        double druga = sc.nextDouble();
+        // Take from user information about second number
+        System.out.println("Write second number: ");
+        double second = sc.nextDouble();
 
-        if (rodzajDziałania == 1)
-            wynik = pierwsza + druga;
+        // Do operation
+        if (typeOfOperation == 1)
+            result = first + second;
 
-        if (rodzajDziałania == 2)
-            wynik = pierwsza - druga;
+        if (typeOfOperation == 2)
+            result = first - second;
 
-        if (rodzajDziałania == 3)
-            wynik = pierwsza * druga;
+        if (typeOfOperation == 3)
+            result = first * second;
 
-        if (rodzajDziałania == 4)
-            wynik = pierwsza / druga;
+        if (typeOfOperation == 4)
+            result = first / second;
 
-        System.out.println("Wynik: " + wynik);
+        // Print result
+        System.out.println("Result: " + result);
 
     }
     
